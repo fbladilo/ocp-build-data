@@ -49,7 +49,12 @@ releases:
             s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:385f2c9dd0d8f40da504275e26fbac24c13f13c47d87b905ac61e79afac4796a
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a0b2e23799ff36b6d7437a99f2fc5bef1f122d47bbae8af23680e52e375a0070
       members:
-        rpms: []
+        rpms:
+          - distgit_key: microshift
+            why: Pin microshift to assembly
+            metadata:
+              is:
+                el9: microshift-4.22.0~ec.3-202603060842.p0.gbc0f5f9.assembly.ec.3.el9
         images:
           - distgit_key: ose-ibm-vpc-block-csi-driver
             why: Set network mode to open
