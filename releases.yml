@@ -76,6 +76,11 @@ releases:
             metadata:
               is:
                 nvr: ose-network-tools-container-v4.22.0-202602101048.p2.g3726e6c.assembly.stream.el9
+          - distgit_key: microshift-bootc
+            metadata:
+              is:
+                nvr: microshift-bootc-container-v4.22.0-202603060931.p2.gbc0f5f9.assembly.ec.3.el9
+            why: Pin microshift-bootc image to assembly
       permits:
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: cluster-node-tuning-operator
