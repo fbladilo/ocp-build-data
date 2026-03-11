@@ -12,7 +12,7 @@ releases:
       group:
         advisories:
           microshift: 162326
-        release_jira: ART-0
+        release_jira: ART-14722
         shipment:
           advisories:
             - kind: image
