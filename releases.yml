@@ -4,12 +4,20 @@ releases:
       type: standard
       basis:
         time: "2026-03-19T03:19:50+00:00"
-        reference_releases:
-          x86_64: 4.18.0-0.nightly-2026-03-19-051340
+        reference_releases!: {}
+          # x86_64: 4.18.0-0.nightly-2026-03-19-051340
       group:
         advisories:
           rpm: -1
           rhcos: -1
+        dependencies:
+          rpms:
+          - el9: runc-1.2.9-3.rhaos4.18.el9
+            why: CONFLICTING_INHERITED_DEPENDENCIES in rhcos
+            non_gc_tag: "rhaos-4.18-rhel-9"
+          - el9: skopeo-1.16.1-3.rhaos4.18.el9
+            why: CONFLICTING_INHERITED_DEPENDENCIES in rhcos
+            non_gc_tag: "rhaos-4.18-rhel-9"
         release_jira: ART-0
         shipment:
           advisories:
@@ -32,9 +40,24 @@ releases:
             aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9afa71fd62bf136be35316dcc30819ec9596007b1d318f0146c86e3096a27e0d
             s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ea561d1e072d702369621ec8885bd8e5cb2e1bd49a17263e93571d8189d7ab30
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f51bda0a3e237de388f2466f42969f8307da92c7c00e44fcb701de374e08ac4f
+      permits:
+        - code: MISMATCHED_NETWORK_MODE
+          component: multus-cni
+        - code: MISMATCHED_NETWORK_MODE
+          component: multus-cni-container-microshift
       members:
         rpms: []
-        images: []
+        images:
+          - distgit_key: openshift-enterprise-builder
+            why: Pinning the build that contains the same rpms as RHCOS
+            metadata:
+              is:
+                nvr: openshift-enterprise-builder-container-v4.18.0-202603051646.p2.g529c968.assembly.stream.el9
+          - distgit_key: ose-agent-installer-api-server
+            why: Pinning the build that contains the same rpms as RHCOS
+            metadata:
+              is:
+                nvr: ose-agent-installer-api-server-container-v4.18.0-202603130030.p2.g7307593.assembly.stream.el9
   4.18.35:
     assembly:
       type: standard
