@@ -45,6 +45,12 @@ releases:
           component: multus-cni
         - code: MISMATCHED_NETWORK_MODE
           component: multus-cni-container-microshift
+      issues:
+        exclude:
+          - id: OCPBUGS-76307
+          - id: OCPBUGS-76222
+          - id: OCPBUGS-76078
+          - id: OCPBUGS-64536
       members:
         rpms: []
         images:
