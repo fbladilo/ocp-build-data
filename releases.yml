@@ -10,6 +10,7 @@ releases:
         advisories:
           rpm: 164860
           rhcos: 164861
+          microshift: 164909
         dependencies:
           rpms:
             - el9: runc-1.2.9-3.rhaos4.18.el9
@@ -56,7 +57,12 @@ releases:
           - id: OCPBUGS-76078
           - id: OCPBUGS-64536
       members:
-        rpms: []
+        rpms:
+          - distgit_key: microshift
+            why: Pin microshift to assembly
+            metadata:
+              is:
+                el9: microshift-4.18.36-202603201457.p0.g9b6f3d1.assembly.4.18.36.el9
         images:
           - distgit_key: openshift-enterprise-builder
             why: Pinning the build that contains the same rpms as RHCOS
