@@ -49,6 +49,35 @@ releases:
             aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:140684a3451a6de6c6d116301dfb33edf7d3f6e59e1046839d8f02f53783e5c3
             s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:88c3a8664fc0fda76bb620f514e50dc3279edad0a6b669ce8d55ff0fa72f41df
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b3441e34318e4fe732130315b5e55777e3c3e71bbe575f85ff0e9fe3e4811c7e
+      permits:
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: cluster-node-tuning-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: dpu-intel-ipu-p4sdk
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: driver-toolkit
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ironic-agent
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-ansible-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-builder
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-tests
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-agent-installer-api-server
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-agent-installer-node-agent
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-frr
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-machine-config-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-network-tools
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-tools
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: rhcos
       members:
         rpms: []
         images:
