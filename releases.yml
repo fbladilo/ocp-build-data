@@ -78,6 +78,8 @@ releases:
           component: ose-tools
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: rhcos
+        - code: MISMATCHED_SIBLINGS
+          component: '*'
       members:
         rpms: []
         images:
