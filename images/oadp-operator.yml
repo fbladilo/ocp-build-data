@@ -7,11 +7,11 @@ content:
     dockerfile: konflux.Dockerfile
     git:
       branch:
-        target: oadp-1.5
+        target: oadp-1.6
       url: git@github.com:openshift-priv/oadp-operator.git
       web: https://github.com/openshift/oadp-operator
     modifications:
-      # https://github.com/openshift/oadp-operator/blob/oadp-1.5/konflux.Dockerfile#L8
+      # https://github.com/openshift/oadp-operator/blob/oadp-1.6/konflux.Dockerfile#L8
       - action: replace
         match: "dnf -y"
         replacement: "microdnf -y"
