@@ -24,7 +24,7 @@ from:
   builder:
     - stream: rhel-9-golang
   member: base-rhel9
-name: oadp/oadp-vm-file-restore-rhel9
+name: oadp/oadp-vmfr-access-rhel9
 owners:
   - oadp-maintainers@redhat.com
 dependents:
