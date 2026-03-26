@@ -31,7 +31,6 @@ from:
   stream: rhel9
 name: mta/mta-analyzer-rpc-rhel9
 owners:
-- fbladilo@redhat.com
-- rjohnson@redhat.com
+- mta-devs@redhat.com
 dependents:
   - mta-operator
