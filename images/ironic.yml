@@ -180,6 +180,7 @@ konflux:
       - python3.12-setuptools
       - python3.12-setuptools_scm
       - python3.12-typing-extensions
+      - python3.12-watchdog
       - python3.12-wheel
       - rpm-build-libs
       - rpm-plugin-systemd-inhibit
