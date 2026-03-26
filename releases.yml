@@ -82,7 +82,12 @@ releases:
         - code: MISMATCHED_SIBLINGS
           component: '*'
       members:
-        rpms: []
+        rpms:
+          - distgit_key: microshift
+            why: Pin microshift to assembly
+            metadata:
+              is:
+                el9: microshift-4.22.0~ec.4-202603260841.p0.g8882ae3.assembly.ec.4.el9
         images:
           - distgit_key: ironic
             why: Query from assembly basis event failed to replicate referenced nightly content exactly. Pinning to replicate.
