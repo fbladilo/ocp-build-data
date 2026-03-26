@@ -45,6 +45,9 @@ releases:
             aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:dd2b142a5891ec5d67067986e329ce363ba3c1efc2dc9222d2f45790f45bb27f
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7ee651197be50d20e26791087ce0a87f3d2ca4471799997a1b80a91b22e9b781
             s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3738033d03986989f4cbfc7f9bbfbf71214c7894db6a11065f5f33cf0bd4a84f
+      issues:
+        include:
+          - id: OCPBUGS-79473
       members:
         rpms: []
         images: []
