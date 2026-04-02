@@ -1,4 +1,40 @@
 releases:
+  4.20.18:
+    assembly:
+      type: standard
+      basis:
+        time: "2026-04-02T02:14:36+00:00"
+        reference_releases:
+          x86_64: 4.20.0-0.nightly-2026-04-02-035740
+      group:
+        advisories:
+          rpm: -1
+          rhcos: -1
+        release_jira: ART-0
+        shipment:
+          advisories:
+            - kind: image
+            - kind: extras
+            - kind: metadata
+            - kind: fbc
+        release_date: 2026-Apr-09
+        upgrades: 4.19.15,4.19.16,4.19.17,4.19.18,4.19.19,4.19.20,4.19.21,4.19.22,4.19.23,4.19.24,4.19.25,4.19.26,4.19.27,4.20.0,4.20.1,4.20.2,4.20.3,4.20.4,4.20.5,4.20.6,4.20.8,4.20.9,4.20.10,4.20.11,4.20.12,4.20.13,4.20.14,4.20.15,4.20.16,4.20.17
+      rhcos:
+        rhel-coreos:
+          images:
+            x86_64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b37450bc86d9999883819cd351b1517c466212feead2421b3bd078f034517023
+            aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e4d2fa7d8f9880f173217503e86fbb45200d8237fb0610565b4a7b3db35ff02b
+            s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4f4f882759b4592ae975d7cafc816b074e78364f8e5006bb2f858ce1d2bf0e6c
+            ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8f675b21e3b8e01bb6cab54fdf8b4558bf062f8c227a81788a12d95d55407562
+        rhel-coreos-extensions:
+          images:
+            x86_64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:10924742912ca403445f90cbc87dcd605c9fe2a3500e33af1dcd534b39f50bd1
+            aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d2a99dcf0481ddae4af57115fd92408c7942f816291f78a7f6bfe7335a91f2d3
+            s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:38651d4adabc76eb09fb4bb0932b52dc6f99e11fe7d49c18944b223d21d87e3d
+            ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:85bdd8364e698cb02a4f0ffe486e302868c62b01661bef9fd34fcf685c6f7ed1
+      members:
+        rpms: []
+        images: []
   4.20.17:
     assembly:
       type: standard
