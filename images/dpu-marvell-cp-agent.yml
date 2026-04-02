@@ -160,6 +160,7 @@ konflux:
       - llvm
       - llvm-libs
       - llvm-toolset
+      - llvm-filesystem
       - mingw64-binutils
       - mingw64-cpp
       - mingw64-crt
