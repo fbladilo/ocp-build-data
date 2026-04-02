@@ -160,6 +160,7 @@ konflux:
       - llvm
       - llvm-libs
       - llvm-toolset
+      - llvm-filesystem
       - mingw64-binutils
       - mingw64-cpp
       - mingw64-crt
@@ -244,6 +245,7 @@ konflux:
       - python3-libs
       - python3-libselinux
       - python3-libsemanage
+      - python3-librepo
       - python3-pip-wheel
       - python3-requests
       - python3-rpm
