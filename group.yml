@@ -1,22 +1,13 @@
-name: oadp-1.5
-csv_namespace: oadp
-product: oadp
-version: 1.5.6
+name: external-secrets-1.1
+csv_namespace: external-secrets-operator
+product: external-secrets
+version: 1.1.0
 
 vars:
-  # The go versions used by the various CI builder images.
-  # WARNING: When updating GO_* vars, update streams.yml so that streams referencing
-  #          the corresponding {GO_*} vars to point to an image that actually provides
-  #          the level of go specified by the variable.
-  #          For example, if GO_LATEST=1.21, `image:` must point to a 1.21 golang.
-  #             rhel-9-golang:
-  #               aliases:
-  #               - rhel-9-golang-{GO_LATEST}
-  #               image: openshift/golang-builder:v1.21.3-202401221732.el9.g00c615b
   GO_LATEST: "1.25"
-  GO_EXTRA: "1.25"  # There is no extra version at this time, so just duplicate latest.
+  GO_EXTRA: "1.25"
   MAJOR: 4
-  MINOR: 19
+  MINOR: 22
 
 arches:
 - x86_64
@@ -40,32 +31,20 @@ konflux:
     enabled: true
   network_mode: hermetic
 
-# OCP versions to publish FBC builds to
 OCP_TARGET_VERSIONS: [
+  "4.18",
   "4.19",
   "4.20",
   "4.21",
+  "4.22",
 ]
 
 assemblies:
   enabled: true
 
-mr_approvers:
-  QE:
-    - akarol
-    - prajoshi
-  DOCS:
-    - anarnold
-
 public_upstreams:
 - private: "https://github.com/openshift-priv"
   public:  "https://github.com/openshift"
-- private: "https://github.com/openshift-priv/migtools-kubevirt-velero-plugin"
-  public:  "https://github.com/migtools/kubevirt-velero-plugin"
-- private: "https://github.com/openshift-priv/migtools-kopia"
-  public:  "https://github.com/migtools/kopia"
-- private: "https://github.com/openshift-priv/migtools-oadp-non-admin"
-  public:  "https://github.com/migtools/oadp-non-admin"
 
 urls:
   brewhub: https://brewhub.engineering.redhat.com/brewhub
@@ -100,20 +79,5 @@ repos:
       aarch64: rhel-9-for-aarch64-appstream-eus-rpms__9_DOT_6
       ppc64le: rhel-9-for-ppc64le-appstream-eus-rpms__9_DOT_6
       s390x: rhel-9-for-s390x-appstream-eus-rpms__9_DOT_6
-    reposync:
-      enabled: false
-
-  rhel-9-codeready-builder-rpms:
-    conf:
-      baseurl:
-        aarch64: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/aarch64/codeready-builder/os/
-        ppc64le: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/ppc64le/codeready-builder/os/
-        s390x: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/s390x/codeready-builder/os/
-        x86_64: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/x86_64/codeready-builder/os/
-    content_set:
-      default: codeready-builder-for-rhel-9-x86_64-eus-rpms__9_DOT_6
-      aarch64: codeready-builder-for-rhel-9-aarch64-eus-rpms__9_DOT_6
-      ppc64le: codeready-builder-for-rhel-9-ppc64le-eus-rpms__9_DOT_6
-      s390x: codeready-builder-for-rhel-9-s390x-eus-rpms__9_DOT_6
     reposync:
       enabled: false
