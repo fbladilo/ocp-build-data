@@ -52,6 +52,35 @@ releases:
       members:
         rpms: []
         images: []
+      permits:
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: dpu-intel-ipu-p4sdk
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ironic-agent
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-ansible-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-builder
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-tests
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-agent-installer-api-server
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-agent-installer-node-agent
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-frr
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-machine-config-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-network-tools
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-tools
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: rhcos
+        - code: MISMATCHED_NETWORK_MODE
+          component: ironic-agent
+        - code: MISMATCHED_SIBLINGS
+          component: '*'
   ec.4:
     assembly:
       type: preview
