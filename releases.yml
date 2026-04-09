@@ -54,6 +54,8 @@ releases:
         images: []
       permits:
         - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: cluster-node-tuning-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
           component: dpu-intel-ipu-p4sdk
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: ironic-agent
