@@ -8,8 +8,8 @@ releases:
           x86_64: 4.19.0-0.nightly-2026-04-08-110555
       group:
         advisories:
-          rpm: -1
-          rhcos: -1
+          rpm: 165554
+          rhcos: 165556
         release_jira: ART-0
         shipment:
           advisories:
