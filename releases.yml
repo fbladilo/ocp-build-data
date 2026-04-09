@@ -32,6 +32,21 @@ releases:
             aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f48155f306652f98e5f976b3b555275f05adc5a03cb1f5ca76923cfb95051759
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7f0fadfd8bb4ca011e1d588d258b8c0593ffa72c04cc7cb27266bf9ca392b0e5
             s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:04cb1372959441fec0dc45bb69310dfe7115c1660c8ec90610a6b4944e32f89b
+      permits:
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: cluster-node-tuning-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-tests
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-network-tools
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-tools
+        - code: MISMATCHED_NETWORK_MODE
+          component: ironic-agent
+        - code: MISMATCHED_NETWORK_MODE
+          component: networking-console-plugin
+        - code: MISMATCHED_NETWORK_MODE
+          component: nmstate-console-plugin
       members:
         rpms: []
         images: []
