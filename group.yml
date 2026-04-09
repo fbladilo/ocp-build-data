@@ -16,6 +16,7 @@ arches:
 - aarch64
 
 operator_image_ref_mode: manifest-list
+canonical_builders_from_upstream: false
 konflux:
   arches:
   - x86_64
