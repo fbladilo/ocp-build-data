@@ -1,4 +1,55 @@
 releases:
+  4.19.28:
+    assembly:
+      type: standard
+      basis:
+        time: "2026-04-08T07:24:51+00:00"
+        reference_releases:
+          x86_64: 4.19.0-0.nightly-2026-04-08-110555
+      group:
+        advisories:
+          rpm: -1
+          rhcos: -1
+        release_jira: ART-0
+        shipment:
+          advisories:
+            - kind: image
+            - kind: extras
+            - kind: metadata
+            - kind: fbc
+        release_date: 2026-Apr-15
+        upgrades: 4.18.19,4.18.20,4.18.21,4.18.22,4.18.23,4.18.24,4.18.25,4.18.26,4.18.27,4.18.28,4.18.29,4.18.30,4.18.31,4.18.32,4.18.33,4.18.34,4.18.35,4.18.36,4.18.37,4.19.0,4.19.1,4.19.2,4.19.3,4.19.4,4.19.5,4.19.6,4.19.7,4.19.8,4.19.9,4.19.10,4.19.11,4.19.12,4.19.13,4.19.14,4.19.15,4.19.16,4.19.17,4.19.18,4.19.19,4.19.20,4.19.21,4.19.22,4.19.23,4.19.24,4.19.25,4.19.26,4.19.27
+      rhcos:
+        rhel-coreos:
+          images:
+            x86_64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:50d6ff1b3ef4e6ac39a63a2fabb29c55cba8f3107c2fcbe3853979e40d73d3f0
+            aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:82fe74e6c4d268ac1e78657d6d550faca4ca067875bc6df0c924ca472622c7af
+            ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:dd8408faaa4d0ebdc5f71db5a727f7bebad515569577b1154e3359ef50cb6f91
+            s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:46d74672f776e01fdf17844be296ec5f299b801f55b3c464d4059abe689c4cb0
+        rhel-coreos-extensions:
+          images:
+            x86_64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9b956d3c55c31ece1d5f3d028a09847abbc11d603315faffe71d488de7754b44
+            aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f48155f306652f98e5f976b3b555275f05adc5a03cb1f5ca76923cfb95051759
+            ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7f0fadfd8bb4ca011e1d588d258b8c0593ffa72c04cc7cb27266bf9ca392b0e5
+            s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:04cb1372959441fec0dc45bb69310dfe7115c1660c8ec90610a6b4944e32f89b
+      permits:
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: cluster-node-tuning-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-tests
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-network-tools
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-tools
+        - code: MISMATCHED_NETWORK_MODE
+          component: ironic-agent
+        - code: MISMATCHED_NETWORK_MODE
+          component: networking-console-plugin
+        - code: MISMATCHED_NETWORK_MODE
+          component: nmstate-console-plugin
+      members:
+        rpms: []
+        images: []
   4.19.27:
     assembly:
       type: standard
