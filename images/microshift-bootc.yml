@@ -37,5 +37,6 @@ canonical_builders_from_upstream: false
 owners:
 - microshift-devel@redhat.com
 konflux:
+  network_mode: open
   sast:
     enabled: true
