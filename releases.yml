@@ -57,7 +57,12 @@ releases:
             metadata:
               is:
                 el9: microshift-4.22.0~ec.5-202604091444.p0.gd9ab91d.assembly.ec.5.el9
-        images: []
+        images:
+          - distgit_key: microshift-bootc
+            metadata:
+              is:
+                nvr: microshift-bootc-container-v4.22.0-202604100947.p2.gd9ab91d.assembly.ec.5.el9
+            why: Pin microshift-bootc image to assembly
       permits:
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: cluster-node-tuning-operator
