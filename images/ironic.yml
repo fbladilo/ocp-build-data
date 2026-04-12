@@ -108,7 +108,9 @@ konflux:
       - kmod-libs
       - kpartx
       - less
+      - libasan
       - libatasmart
+      - libatomic
       - libblockdev
       - libblockdev-crypto
       - libblockdev-fs
@@ -135,6 +137,8 @@ konflux:
       - libss
       - libstdc++-devel
       - libudisks2
+      - libubsan
+      - libusbx
       - libxcrypt-devel
       - libxmlb
       - make
