@@ -91,6 +91,7 @@ konflux:
       - glibc-gconv-extra
       - glibc-headers
       - grub2-common
+      - grub2-efi-aa64
       - grub2-efi-x64
       - grub2-pc
       - grub2-pc-modules
@@ -186,6 +187,7 @@ konflux:
       - rpm-plugin-systemd-inhibit
       - rpm-sign-libs
       - shared-mime-info
+      - shim-aa64
       - shim-x64
       - systemd
       - systemd-pam
