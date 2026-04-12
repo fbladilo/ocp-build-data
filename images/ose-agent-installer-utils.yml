@@ -47,6 +47,7 @@ konflux:
       - gcc-c++
       - gcc-plugin-annobin
       - glibc
+      - glibc-gconv-extra
       - glibc-devel
       - glibc-headers
       - kernel-headers
