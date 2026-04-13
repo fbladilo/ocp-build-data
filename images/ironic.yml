@@ -193,6 +193,7 @@ konflux:
       - shared-mime-info
       - shim-aa64
       - shim-x64
+      - sqlite
       - systemd
       - systemd-pam
       - systemd-rpm-macros
