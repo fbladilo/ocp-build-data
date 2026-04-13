@@ -52,6 +52,7 @@ konflux:
       - git-core
       - git-core-doc
       - glibc
+      - glibc-gconv-extra
       - glibc-devel
       - glibc-headers
       - kernel-headers
