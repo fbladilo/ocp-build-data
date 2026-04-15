@@ -23,11 +23,8 @@ from:
 konflux:
   cachi2:
     lockfile:
-      dnf_modules_enable: true
-      modules:
-        - perl:5.26
-        - perl-IO-Socket-SSL:2.066
-        - perl-libwww-perl:6.34
+      dnf_modules_enable: false
+      modules: []  # Emptied: module metadata in lockfile causes DNF modular filtering in hermetic builds but rebaser skips module enablement for EL8, and lockfile RPMs are out of sync with module metadata versions. See art-tools#2686
       enabled: true
       inspect_parent: false
 name: rhmtc/openshift-migration-rhel8-operator
