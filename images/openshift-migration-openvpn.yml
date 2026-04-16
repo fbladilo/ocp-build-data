@@ -218,7 +218,7 @@ konflux:
         - perl-macros
         - perl-MIME-Base64
         - perl-Mozilla-CA
-        - perl-Net-SSLeay
+        - perl-Net-SSLeay-1.88-2.module+el8.6.0+13392+6b8485cb  # Pinned to perl:5.32 context; bare name resolves to perl:5.24 context (higher EVR due to RPM segment comparison of context hash)
         - perl-parent
         - perl-PathTools
         - perl-Pod-Escapes
