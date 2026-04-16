@@ -15,7 +15,7 @@ content:
       # so we inject it manually. Lockfile resolver picks perl 5.32 modular RPMs as highest EVR. See art-tools#2686
       - action: replace
         match: "dnf builddep -y pkcs11-helper*"
-        replacement: "dnf module enable -y perl:5.32 perl-IO-Socket-SSL:2.066 perl-libwww-perl:6.34 && dnf builddep -y pkcs11-helper*"
+        replacement: "dnf module disable -y freeradius && dnf module enable -y perl:5.32 perl-IO-Socket-SSL:2.066 perl-libwww-perl:6.34 && dnf builddep -y pkcs11-helper*"
       - action: replace
         match: "dnf clean all"
         replacement: "microdnf clean all"

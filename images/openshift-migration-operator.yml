@@ -11,7 +11,7 @@ content:
       # so we inject it manually. Lockfile resolver picks perl 5.32 modular RPMs as highest EVR. See art-tools#2686
       - action: replace
         match: "dnf -y install python3-boto3 nss_wrapper"
-        replacement: "dnf module enable -y perl:5.32 perl-IO-Socket-SSL:2.066 perl-libwww-perl:6.34 && dnf -y install python3-boto3 nss_wrapper"
+        replacement: "dnf module disable -y freeradius && dnf module enable -y perl:5.32 perl-IO-Socket-SSL:2.066 perl-libwww-perl:6.34 && dnf -y install python3-boto3 nss_wrapper"
 delivery:
   bundle_delivery_repo_name: rhmtc/openshift-migration-operator-bundle
   delivery_repo_names:
