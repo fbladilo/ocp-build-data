@@ -1,4 +1,53 @@
 releases:
+  4.20.19:
+    assembly:
+      type: standard
+      basis:
+        time: "2026-04-15T06:05:01+00:00"
+        reference_releases:
+          x86_64: 4.20.0-0.nightly-2026-04-15-065519
+      group:
+        advisories:
+          rpm: -1
+          rhcos: -1
+        release_jira: ART-0
+        shipment:
+          advisories:
+            - kind: image
+            - kind: extras
+            - kind: metadata
+            - kind: fbc
+        release_date: 2026-Apr-22
+        upgrades: 4.19.15,4.19.16,4.19.17,4.19.18,4.19.19,4.19.20,4.19.21,4.19.22,4.19.23,4.19.24,4.19.25,4.19.26,4.19.27,4.19.28,4.20.0,4.20.1,4.20.2,4.20.3,4.20.4,4.20.5,4.20.6,4.20.8,4.20.9,4.20.10,4.20.11,4.20.12,4.20.13,4.20.14,4.20.15,4.20.16,4.20.17,4.20.18
+      rhcos:
+        rhel-coreos:
+          images:
+            x86_64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:df15dd8834fda81c18b0c1373c1f93258b033efb40d8b94f2a7a78bd2b7e3b58
+            aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8cbc2572cdc1fbae3a61ae84d1de384cd433f86ef63eaca178977de4b5321bc6
+            s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:adc233eb717f0e20d81f047266d9e94e5c00faac0276f8d4843121d59eb56540
+            ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c82ee38b8edde467cc1f689fbac7fda7c9d1a37c818833ab2af4ecd54cf056c2
+        rhel-coreos-extensions:
+          images:
+            x86_64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d1fc1fcb9645517ab568f2e99b25ded04cfb3971b75bf72188b75347d2808c7b
+            aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9658b3eddb30744e5adfe1a0c7d3f62889d12983510ebd1f8b3c60f2ec8992eb
+            s390x: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:800d38a0215372d861a5e306d7b78e945ba1662c7edb0b7cb7279d8db8558287
+            ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5562b0fb4c62fceccc2c4bed300860030885f6955bb939eae953ab9e8ef46ce9
+      permits:
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: cluster-node-tuning-operator
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: openshift-enterprise-tests
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-agent-installer-api-server
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-network-tools
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: ose-tools
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: rhcos
+      members:
+        rpms: []
+        images: []
   4.20.18:
     assembly:
       type: standard
