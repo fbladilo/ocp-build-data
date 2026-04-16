@@ -11,6 +11,11 @@ content:
       - action: replace
         match: "dnf -y install cpio"
         replacement: "microdnf -y install cpio"
+      # Enable perl:5.32 module for hermetic builds - rebaser skips module enablement for EL8 (el_ver < 9 guard)
+      # so we inject it manually. Lockfile resolver picks perl 5.32 modular RPMs as highest EVR. See art-tools#2686
+      - action: replace
+        match: "dnf builddep -y pkcs11-helper*"
+        replacement: "dnf module enable -y perl:5.32 perl-IO-Socket-SSL perl-libwww-perl && dnf builddep -y pkcs11-helper*"
       - action: replace
         match: "dnf clean all"
         replacement: "microdnf clean all"
@@ -34,8 +39,11 @@ from:
 konflux:
   cachi2:
     lockfile:
-      dnf_modules_enable: false
-      modules: []  # Emptied: module metadata in lockfile causes DNF modular filtering in hermetic builds but rebaser skips module enablement for EL8, and lockfile RPMs are out of sync with module metadata versions. See art-tools#2686
+      dnf_modules_enable: true
+      modules:
+        - perl:5.32
+        - perl-IO-Socket-SSL
+        - perl-libwww-perl
       enabled: true
       inspect_parent: false
       rpms:
