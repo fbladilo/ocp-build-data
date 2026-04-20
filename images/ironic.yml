@@ -66,6 +66,7 @@ konflux:
       - device-mapper-libs
       - dmidecode
       - dnf
+      - dnf-data
       - dnf-plugins-core
       - dosfstools
       - dracut
