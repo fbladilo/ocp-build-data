@@ -98,6 +98,7 @@ konflux:
       - grub2-pc-modules
       - grub2-tools
       - grub2-tools-minimal
+      - hwdata
       - ima-evm-utils
       - inih
       - kbd
