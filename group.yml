@@ -109,8 +109,8 @@ rhcos:
       rhel_version: 9.6
       meta_type: meta
   enabled_repos:
-  - rhel-96-baseos
-  - rhel-96-appstream
+  - rhel-9-baseos-rpms
+  - rhel-9-appstream-rpms
   - rhel-9-fast-datapath-rpms
   - rhel-9-server-ose-rpms
   require_consistency:
@@ -277,20 +277,20 @@ repos:
   rhel-9-codeready-builder-rpms:
     conf:
       baseurl:
-        aarch64: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/aarch64/codeready-builder/os/
-        ppc64le: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/ppc64le/codeready-builder/os/
-        s390x: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/s390x/codeready-builder/os/
-        x86_64: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/x86_64/codeready-builder/os/
+        aarch64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/aarch64/codeready-builder/os/
+        ppc64le: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/ppc64le/codeready-builder/os/
+        s390x: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/s390x/codeready-builder/os/
+        x86_64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/codeready-builder/os/
       ci_alignment:
         profiles:
         - el9
         localdev:
           enabled: true
     content_set:
-      default: codeready-builder-for-rhel-9-x86_64-eus-rpms__9_DOT_6
-      aarch64: codeready-builder-for-rhel-9-aarch64-eus-rpms__9_DOT_6
-      ppc64le: codeready-builder-for-rhel-9-ppc64le-eus-rpms__9_DOT_6
-      s390x: codeready-builder-for-rhel-9-s390x-eus-rpms__9_DOT_6
+      default: codeready-builder-for-rhel-9-x86_64-e4s-rpms__9_DOT_6
+      aarch64: codeready-builder-for-rhel-9-aarch64-e4s-rpms__9_DOT_6
+      ppc64le: codeready-builder-for-rhel-9-ppc64le-e4s-rpms__9_DOT_6
+      s390x: codeready-builder-for-rhel-9-s390x-e4s-rpms__9_DOT_6
     reposync:
       enabled: false
 
@@ -382,29 +382,7 @@ repos:
       ppc64le: rhel-9-for-ppc64le-baseos-e4s-rpms__9_DOT_6
       s390x: rhel-9-for-s390x-baseos-e4s-rpms__9_DOT_6
     reposync:
-      enabled: false
-
-  rhel-96-baseos-rpms:
-    conf:
-      extra_options:
-        module_hotfixes: 1
-      baseurl:
-        aarch64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/aarch64/baseos/os/
-        ppc64le: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/ppc64le/baseos/os/
-        s390x: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/s390x/baseos/os/
-        x86_64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/baseos/os/
-      ci_alignment:
-        profiles:
-        - el9
-        localdev:
-          enabled: true
-    content_set:
-      default: rhel-9-for-x86_64-baseos-e4s-rpms__9_DOT_6
-      aarch64: rhel-9-for-aarch64-baseos-e4s-rpms__9_DOT_6
-      ppc64le: rhel-9-for-ppc64le-baseos-e4s-rpms__9_DOT_6
-      s390x: rhel-9-for-s390x-baseos-e4s-rpms__9_DOT_6
-    reposync:
-      enabled: false
+      enabled: true
 
   rhel-9-appstream-rpms:
     conf:
@@ -426,29 +404,7 @@ repos:
       ppc64le: rhel-9-for-ppc64le-appstream-e4s-rpms__9_DOT_6
       s390x: rhel-9-for-s390x-appstream-e4s-rpms__9_DOT_6
     reposync:
-      enabled: false
-
-  rhel-96-appstream-rpms:
-    conf:
-      extra_options:
-        module_hotfixes: 1
-      baseurl:
-        aarch64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/aarch64/appstream/os/
-        ppc64le: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/ppc64le/appstream/os/
-        s390x: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/s390x/appstream/os/
-        x86_64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/appstream/os/
-      ci_alignment:
-        profiles:
-        - el9
-        localdev:
-          enabled: true
-    content_set:
-      default: rhel-9-for-x86_64-appstream-e4s-rpms__9_DOT_6
-      aarch64: rhel-9-for-aarch64-appstream-e4s-rpms__9_DOT_6
-      ppc64le: rhel-9-for-ppc64le-appstream-e4s-rpms__9_DOT_6
-      s390x: rhel-9-for-s390x-appstream-e4s-rpms__9_DOT_6
-    reposync:
-      enabled: false
+      enabled: true
 
   rhel-9-server-ose-rpms-embargoed:
     conf:
@@ -618,64 +574,39 @@ repos:
     reposync:
       enabled: false
 
-  rhel-96-baseos:
+  rhel-9-nfv-rpms:
     conf:
       baseurl:
-        x86_64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/baseos/os/
-        aarch64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/aarch64/baseos/os/
-        ppc64le: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/ppc64le/baseos/os/
-        s390x: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/s390x/baseos/os/
-      extra_options:
-        gpgcheck: "1"
-    content_set:
-      default: rhel-9-for-x86_64-baseos-e4s-rpms__9_DOT_6
-      aarch64: rhel-9-for-aarch64-baseos-e4s-rpms__9_DOT_6
-      ppc64le: rhel-9-for-ppc64le-baseos-e4s-rpms__9_DOT_6
-      s390x: rhel-9-for-s390x-baseos-e4s-rpms__9_DOT_6
-    reposync:
-      enabled: true
-
-  rhel-96-appstream:
-    conf:
-      baseurl:
-        x86_64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/appstream/os/
-        aarch64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/aarch64/appstream/os/
-        ppc64le: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/ppc64le/appstream/os/
-        s390x: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/s390x/appstream/os/
-      extra_options:
-        gpgcheck: "1"
-    content_set:
-      default: rhel-9-for-x86_64-appstream-e4s-rpms__9_DOT_6
-      aarch64: rhel-9-for-aarch64-appstream-e4s-rpms__9_DOT_6
-      ppc64le: rhel-9-for-ppc64le-appstream-e4s-rpms__9_DOT_6
-      s390x: rhel-9-for-s390x-appstream-e4s-rpms__9_DOT_6
-    reposync:
-      enabled: true
-
-  rhel-96-nfv:
-    conf:
-      baseurl:
-        # This is only available for x86_64, making the others not 404
         x86_64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/nfv/os/
         aarch64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/nfv/os/
         ppc64le: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/nfv/os/
         s390x: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/nfv/os/
+      ci_alignment:
+        profiles:
+        - el9
+        localdev:
+          enabled: true
       extra_options:
-        gpgcheck: "1"
+        module_hotfixes: 1
     content_set:
       default: rhel-9-for-x86_64-nfv-e4s-rpms__9_DOT_6
     reposync:
       enabled: true
 
-  rhel-96-highavailability:
+  rhel-9-highavailability-rpms:
     conf:
       baseurl:
         x86_64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/x86_64/highavailability/os/
         aarch64: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/aarch64/highavailability/os/
         ppc64le: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/ppc64le/highavailability/os/
         s390x: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/s390x/highavailability/os/
+      ci_alignment:
+        profiles:
+        - el9
+        localdev:
+          enabled: true
       extra_options:
-        gpgcheck: "1"
+        module_hotfixes: 1
     content_set:
       default: rhel-9-for-x86_64-highavailability-e4s-rpms__9_DOT_6
       aarch64: rhel-9-for-aarch64-highavailability-e4s-rpms__9_DOT_6
@@ -683,6 +614,7 @@ repos:
       s390x: rhel-9-for-s390x-highavailability-e4s-rpms__9_DOT_6
     reposync:
       enabled: true
+
   rhel-10-baseos:
     conf:
       baseurl:
