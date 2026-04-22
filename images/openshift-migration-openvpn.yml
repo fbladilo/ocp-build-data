@@ -36,7 +36,7 @@ konflux:
     lockfile:
       dnf_modules_enable: true
       modules:
-        - perl
+        - perl:5.32
         - perl-IO-Socket-SSL
         - perl-libwww-perl
       enabled: true
