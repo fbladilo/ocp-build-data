@@ -287,7 +287,8 @@ konflux:
         - urw-base35-standard-symbols-ps-fonts
         - urw-base35-z003-fonts
         - xkeyboard-config
-        - xorg-x11-fonts-ISO8859-1-100dpi
+        # depends on https://github.com/openshift-eng/art-tools/pull/2797
+        - xorg-x11-fonts-ISO8859-1-100dpi-7.5-19.el8.noarch
         - xorg-x11-font-utils
         - xorg-x11-server-utils
         - xz
