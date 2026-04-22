@@ -111,6 +111,7 @@ konflux:
       - kpartx
       - less
       - libdrm
+      - libdrm-amdgpu
       - libasan
       - libatasmart
       - libatomic
