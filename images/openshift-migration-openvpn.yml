@@ -14,9 +14,9 @@ content:
       - action: replace
         match: "dnf clean all"
         replacement: "microdnf clean all"
-      - action: replace
-        match: "dnf builddep -y pkcs11-helper"
-        replacement: "dnf module enable -y perl-IO-Socket-SSL && dnf builddep -y pkcs11-helper"
+#      - action: replace
+#        match: "dnf builddep -y pkcs11-helper"
+#        replacement: "dnf module enable -y perl-IO-Socket-SSL && dnf builddep -y pkcs11-helper"
 delivery:
   delivery_repo_names:
     - rhmtc/openshift-migration-openvpn-rhel8
@@ -287,7 +287,6 @@ konflux:
         - urw-base35-standard-symbols-ps-fonts
         - urw-base35-z003-fonts
         - xkeyboard-config
-        # depends on https://github.com/openshift-eng/art-tools/pull/2797
         - xorg-x11-fonts-ISO8859-1-100dpi
         - xorg-x11-font-utils
         - xorg-x11-server-utils
