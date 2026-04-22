@@ -56,6 +56,7 @@ konflux:
       - binutils-gold
       - cpio
       - cpp
+      - dbxtool
       - crypto-policies-scripts
       - cryptsetup-libs
       - dbus
@@ -97,6 +98,7 @@ konflux:
       - grub2-pc-modules
       - grub2-tools
       - grub2-tools-minimal
+      - hwdata
       - ima-evm-utils
       - inih
       - kbd
@@ -108,6 +110,7 @@ konflux:
       - kmod-libs
       - kpartx
       - less
+      - libdrm
       - libasan
       - libatasmart
       - libatomic
@@ -132,6 +135,7 @@ konflux:
       - libkcapi-hmaccalc
       - libmpc
       - libnsl2
+      - libpciaccess
       - libpkgconf
       - libseccomp
       - libss
