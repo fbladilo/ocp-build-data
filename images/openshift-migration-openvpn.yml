@@ -40,6 +40,7 @@ konflux:
       dnf_modules_enable: true
       modules:
         - perl-IO-Socket-SSL
+        - perl-libwww-perl
       enabled: true
       inspect_parent: false
       rpms:
