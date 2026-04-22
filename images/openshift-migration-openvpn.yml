@@ -14,9 +14,6 @@ content:
       - action: replace
         match: "dnf clean all"
         replacement: "microdnf clean all"
-#      - action: replace
-#        match: "dnf builddep -y pkcs11-helper"
-#        replacement: "dnf module enable -y perl-IO-Socket-SSL && dnf builddep -y pkcs11-helper"
 delivery:
   delivery_repo_names:
     - rhmtc/openshift-migration-openvpn-rhel8
@@ -39,6 +36,7 @@ konflux:
     lockfile:
       dnf_modules_enable: true
       modules:
+        - perl
         - perl-IO-Socket-SSL
         - perl-libwww-perl
       enabled: true
