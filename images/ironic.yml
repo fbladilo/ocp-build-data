@@ -67,6 +67,7 @@ konflux:
       - device-mapper-libs
       - dmidecode
       - dnf
+      - dnf-data
       - dnf-plugins-core
       - dosfstools
       - dracut
@@ -136,6 +137,7 @@ konflux:
       - libmpc
       - libpciaccess
       - libnsl2
+      - libpciaccess
       - libpkgconf
       - libseccomp
       - libss
