@@ -45,14 +45,15 @@ konflux:
       - elfutils-debuginfod-client
       - gcc
       - gcc-c++
-      - libstdc++-devel
       - glibc
-      - glibc-headers
       - glibc-devel
+      - glibc-headers
       - kernel-headers
       - libasan
       - libatomic
+      - libgomp
       - libmpc
+      - libstdc++-devel
       - libubsan
       - libxcrypt-devel
       - make
