@@ -43,6 +43,7 @@ konflux:
       - elfutils-debuginfod-client
       - gcc
       - glibc-devel
+      - libgomp
       - glibc-headers
       - kernel-headers
       - libasan
