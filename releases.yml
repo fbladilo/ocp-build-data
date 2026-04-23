@@ -64,8 +64,6 @@ releases:
           component: ose-machine-config-operator
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: rhcos
-        - code: IMPERMISSIBLE
-          component: reference-releases
       members:
         rpms: []
         images: []
