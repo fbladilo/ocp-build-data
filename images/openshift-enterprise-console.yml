@@ -25,6 +25,10 @@ cachito:
   packages:
     yarn:
     - path: frontend
+okd:
+  content:
+    source:
+      modifications: []
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: openshift-enterprise-console-container
