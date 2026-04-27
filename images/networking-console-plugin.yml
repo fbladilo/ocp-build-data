@@ -13,7 +13,7 @@ content:
       match: "./artifacts/yarn-${YARN_VERSION}.tar.gz"
       replacement: "/cachi2/output/deps/generic/yarn-${YARN_VERSION}.tar.gz"
     pkg_managers:
-    - yarn
+    - npm
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: networking-console-plugin-container
@@ -42,7 +42,7 @@ konflux:
   cachi2:
     lockfile:
       modules:
-      - nginx:1.24
+      - nginx:1.26
       rpms:
       - nginx
     artifact_lockfile:
