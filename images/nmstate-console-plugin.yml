@@ -50,7 +50,7 @@ konflux:
   cachi2:
     lockfile:
       modules:
-      - nginx:1.24
+      - nginx:1.26
       rpms:
       - nginx
     artifact_lockfile:
