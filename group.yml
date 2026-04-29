@@ -47,8 +47,6 @@ konflux:
       force: true
     enabled: true
     gomod_version_patch: true
-  sast:
-    enabled: true
   network_mode: hermetic
   # The number of times a build should be attempted before giving up.
   # Each failed attempt will result in a failed record in BigQuery
