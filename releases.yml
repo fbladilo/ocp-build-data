@@ -50,6 +50,11 @@ releases:
       members:
         rpms: []
         images: []
+      permits:
+        - code: CONFLICTING_INHERITED_DEPENDENCY
+          component: rhcos
+        - code: CONFLICTING_GROUP_RPM_INSTALLED
+          component: rhcos
   ec.0:
     assembly:
       type: preview
