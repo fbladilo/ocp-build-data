@@ -5,10 +5,7 @@ releases:
       basis:
         time: "2026-04-26T00:57:19+00:00"
       group:
-        advisories:
-          rpm: 166602
-          rhcos: 166603
-          microshift: 166604
+        advisories: {}
         release_jira: ART-14755
         shipment:
           advisories:
